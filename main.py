@@ -49,7 +49,7 @@ def scheduling_problem():
     p.addConstraint(lambda a,b: a != b, ("D", "A"))
     p.addConstraint(lambda a,b: a != b, ("B", "C"))
     p.addConstraint(lambda a,b: a == b, ("B", "A"))
-    
+    p.addConstraint(lambda a,b,c: a == b or c,  ("E","B", "C"))
     
 
     s2 = p.getSolution()
